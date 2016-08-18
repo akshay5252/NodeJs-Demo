@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  .row
+    .col-md-6
+      h1 Edit Department
+      form(role="form", method="post", action="/departments/#{department.id}?_method=put")
+        include editDepartment
+        button.btn.btn-primary(type="submit") Edit Department

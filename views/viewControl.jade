@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  .row
+    .col-md-6
+      form(role="form", method="get", action="/employees/#{employee.id}")
+        include view        

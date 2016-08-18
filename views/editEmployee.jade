@@ -1,0 +1,36 @@
+.form-group
+  label(for="name") Full Name
+  input#name.form-control(name="name", type="text", value=employee.name, required)
+.form-group
+  label(for="designation") Designation
+  input#designation.form-control(name="designation", type="text", value=employee.designation, required)
+.form-group
+  label(for="department") Department
+  input#department.form-control(name="department", type="text", value=employee.department, required)
+.form-group
+  label(for="salary") Salary
+  input#salary.form-control(name="salary", type="number", value=employee.salary, required)
+.form-group
+  label(for="gender") Gender
+  select#gender.form-control(name="gender", value=employee.gender, required)
+    option(selected=employee.gender) #{employee.gender}
+    option(value="Male") Male
+    option(value="Female") Female
+.form-group
+  label(for="age") Age
+  input#age.form-control(name="age", type="number", value=employee.age, required)
+.form-group
+  label(for="type") Employment Type
+  select#type.form-control(name="type", value=employee.type)
+    option(selected=employee.type) #{employee.type}
+    option(value="Full Time") Full Time
+    option(value="Part Time") Part Time
+    option(value="Contract") Contract
+    option(value="Internship") Internship
+    option(value="On Temprorary Basis") On Temprorary Basis
+  .form-group
+  label(for="phone") Phone
+  input#phone.form-control(name="contact", type="number", value=employee.contact, required)      	
+.form-group
+  label(for="email") Email
+  input#email.form-control(name="email", type="email", value=employee.email, required)

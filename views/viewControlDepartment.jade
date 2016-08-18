@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  .row
+    .col-md-6
+      form(role="form", method="get", action="/departments/#{department.id}")
+        include viewDepartment        

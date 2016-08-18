@@ -1,0 +1,45 @@
+extend layout
+
+block content
+  div.center
+    h1(style="font-style:italic; font-weight:bolder;") Employee View
+    table.table.table-striped
+      tbody(style="font-weight:bolder;")
+        tr
+          td Employee ID:
+          td #{employee.id}
+        tr
+          td Employee Name:
+          td #{employee.name}
+        tr
+          td Employee Designation:
+          td #{employee.designation}
+        tr
+          td Employment Department:
+          td #{employee.department}
+        tr
+          td Employee Salary:
+          td #{employee.salary}
+        tr
+          td Employee Age:
+          td #{employee.age}        
+        tr
+          td Employment Type:
+          td #{employee.type}        
+        tr
+          td Employee Phone:
+          td #{employee.contact}        
+        tr
+          td Employee Email:
+          td #{employee.email}                  
+  div(style="padding-left:1%;")
+    div(style="padding-top:2%;")
+          a.btn.btn-primary.btn-mg(href="/employees") Return to List
+  div(style="padding-left:1%;")        
+    div(style="padding-top:2%;")        
+          a.btn.btn-primary.btn-mg(href="/") Return to Home
+  div(style="padding-left:1%;")
+    div(style="padding-top:2%;")
+          a.btn.btn-primary.btn-mg(href="/api/employees/#{employee.id}") Show Json Data    
+        
+            

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .row
+    .col-md-6
+      h1 Employee Creation Form
+      form(role="form", method="post", action="/employees/")
+        include editEmployee
+        button.btn.btn-primary(type="submit") Add Employee
+
+      div(style="margin-left:45%;").pull-left
+          a.btn.btn-primary.btn-lg(href="/employees") Return to Employee's List  

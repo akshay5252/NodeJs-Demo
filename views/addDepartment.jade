@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  .row
+    .col-md-5
+      div(id="departmentCreationForm")
+        h1(style="font-style:italic; font-weight:bolder;") Department Creation Form
+        form(id ="departmentForm" role="form", method="post", action="/departments/")
+          include editDepartment
+          button.btn.btn-primary(type="submit") Add Department
+        div(style="margin-left:45%;").pull-left
+          a.btn.btn-primary.btn-lg(href="/departments") Return to Department's List    
+        

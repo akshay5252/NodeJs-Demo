@@ -1,0 +1,27 @@
+extend layout
+
+block content
+  div.center
+    h1(style="font-style:italic; font-weight:bolder;") Department View
+    table.table.table-striped
+      tbody(style="font-weight:bolder;")
+        tr
+          td Department ID:
+          td #{department.id}
+        tr
+          td Department Name:
+          td #{department.name}
+        tr
+          td Department Location:
+          td #{department.location}
+  div(style="padding-left:1%;")
+    div(style="padding-top:2%;")
+          a.btn.btn-primary.btn-mg(href="/departments") Return to List
+  div(style="padding-left:1%;")        
+    div(style="padding-top:2%;")        
+          a.btn.btn-primary.btn-mg(href="/") Return to Home
+  div(style="padding-left:1%;")
+    div(style="padding-top:2%;")
+          a.btn.btn-primary.btn-mg(href="/api/departments/#{department.id}") Show Json Data    
+        
+            

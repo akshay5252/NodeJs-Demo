@@ -1,0 +1,18 @@
+.form-group#departmentForm
+  label(for="name") Department Name
+  input#name.form-control(name="name", type="text", value=department.name, placeholder="DEPARTMENT NAME", required)
+.form-group
+  label(for="location") Department Location
+  select#location.form-control(name="location", value=department.location)
+    option(selected=department.location) #{department.location}
+    option(value="Boston HQ, USA") Boston HQ, USA
+    option(value="Chicago, USA") Chicago, USA
+    option(value="Delhi, India") Delhi, India
+    option(value="Ernakulam, India") Ernakulam, India
+    option(value="Frankfurt, Germany") Frankfurt, Germany
+.form-group
+  label(for="email") Department Email
+  input#email.form-control(name="email", type="email", value=department.email,placeholder="test@hotmail.com", required)
+.form-group
+  label(for="contact") Department Contact
+  input#contact.form-control(name="contact", type="number", value=department.contact,required,minlength="10")      

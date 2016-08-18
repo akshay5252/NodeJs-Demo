@@ -1,0 +1,34 @@
+extend layout
+
+block content
+  h1(align="center",style="font-style:italic; font-weight:bolder;") List of Department
+   p
+    a#deleteDepartment.btn.btn-default(hrer="#") Delete
+    |  
+    a#add.btn.btn-default(href="/departments/add") Add new
+  table.table.table-bordered.table-striped.noborder
+    thead
+      tr(style="font-style:italic; font-weight:bolder;")
+        th
+        th ID
+        th Name
+        th Location
+        th Emai
+        th Contact
+    tbody
+      if !departments.length
+        tr
+          td(colspan=6) You should add a Department
+      else
+        each department in departments
+          tr
+            td 
+              input(type="checkbox", id=department.id)
+            td
+              a(href="/departments/#{department.id}") #{department.id}
+            td #{department.name}
+            td #{department.location}			
+            td #{department.email}
+            td #{department.contact}
+  div(style="margin-left:45%;").pull-left
+          a.btn.btn-primary.btn-lg(href="/") Return to Home          

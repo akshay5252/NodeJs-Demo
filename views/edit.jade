@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  .row
+    .col-md-6
+      h1 Edit an Employee
+      form(role="form", method="post", action="/employees/#{employee.id}?_method=put")
+        include editEmployee
+        button.btn.btn-primary(type="submit") Edit Employee
